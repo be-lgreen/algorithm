@@ -1,3 +1,5 @@
+// 위상정렬
+
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -35,13 +37,13 @@ int main(){
         answer.push_back(top);
 
         int index;
-        for(int i=0; i<arr[top].size(); i++){
-            index = arr[top][i];
-            inDegree[index] -= 1;
-            if(inDegree[index] == 0)
-                q.push(index);
-        }
+    for(int i=0; i<arr[top].size(); i++){
+        index = arr[top][i];
+        inDegree[index] -= 1;
+        if(inDegree[index] == 0)
+            q.push(index);
     }
+}
 
 
     for(int i=0; i<answer.size(); i++){
