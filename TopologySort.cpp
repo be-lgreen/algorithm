@@ -40,6 +40,13 @@ vector<int> topologySort(vector<vector<int>> &graph){
     return answer;
 }
 
+void printSolution(vector<int> &v){
+    for(int i=0; i<v.size(); i++){
+        cout << v[i] << " ";
+    }
+    cout << endl;
+}
+
 int main(){
     // adj list (1 ~ 7)
     vector<vector<int> > graph1{
@@ -67,15 +74,10 @@ int main(){
 
 
     vector<int> answer = topologySort(graph1);
-    for(int i=0; i<answer.size(); i++){
-        cout << answer[i] << " ";
-    }
-    cout << endl;
+    printSolution(answer);
 
     answer = topologySort(graph2);
-    for(int i=0; i<answer.size(); i++){
-        cout << answer[i] << " ";
-    }
-    cout << endl;
+    printSolution(answer);
 
+    return 0;
 }
